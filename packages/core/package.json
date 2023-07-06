@@ -1,0 +1,27 @@
+{
+  "name": "@www-cli-dev/core",
+  "version": "1.0.0",
+  "description": "www-cli-dev core",
+  "author": "wangyulong <yulong.a.wang@accenture.com>",
+  "homepage": "https://github.com/wswyl/www-cli-dev#readme",
+  "license": "ISC",
+  "main": "lib/core.js",
+  "directories": {
+    "lib": "lib",
+    "test": "__tests__",
+    "@www-cli-dev/utils": "^1.0.0"
+  },
+  "files": [
+    "lib"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wswyl/www-cli-dev.git"
+  },
+  "scripts": {
+    "test": "node ./__tests__/core.test.js"
+  },
+  "bugs": {
+    "url": "https://github.com/wswyl/www-cli-dev/issues"
+  }
+}
