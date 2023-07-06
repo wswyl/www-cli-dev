@@ -21,6 +21,9 @@
   "scripts": {
     "test": "node ./__tests__/core.test.js"
   },
+  "dependencies": {
+    "@www-cli-dev/utils": "^1.0.0"
+  },
   "bugs": {
     "url": "https://github.com/wswyl/www-cli-dev/issues"
   }
