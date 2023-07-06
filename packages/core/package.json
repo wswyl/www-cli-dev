@@ -1,6 +1,6 @@
 {
   "name": "@www-cli-dev/core",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "description": "www-cli-dev core",
   "author": "wangyulong <yulong.a.wang@accenture.com>",
   "homepage": "https://github.com/wswyl/www-cli-dev#readme",
@@ -30,5 +30,8 @@
   "bugs": {
     "url": "https://github.com/wswyl/www-cli-dev/issues"
   },
-  "gitHead": "2183e58a53163c3ae161a65e12cb239b8736a561"
+  "gitHead": "2183e58a53163c3ae161a65e12cb239b8736a561",
+  "publishConfig": {
+    "access": "public"
+  }
 }
