@@ -1,6 +1,6 @@
 {
   "name": "@www-cli-dev/core",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "www-cli-dev core",
   "author": "wangyulong <yulong.a.wang@accenture.com>",
   "homepage": "https://github.com/wswyl/www-cli-dev#readme",
@@ -25,7 +25,7 @@
     "test": "node ./__tests__/core.test.js"
   },
   "dependencies": {
-    "@www-cli-dev/utils": "^1.0.1"
+    "@www-cli-dev/utils": "^1.0.2"
   },
   "bugs": {
     "url": "https://github.com/wswyl/www-cli-dev/issues"
