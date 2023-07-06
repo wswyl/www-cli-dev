@@ -1,6 +1,6 @@
 {
   "name": "@www-cli-dev/utils",
-  "version": "1.0.2",
+  "version": "1.0.0",
   "description": "> TODO: description",
   "author": "wangyulong <yulong.a.wang@accenture.com>",
   "homepage": "https://github.com/wswyl/www-cli-dev#readme",
@@ -23,5 +23,5 @@
   "bugs": {
     "url": "https://github.com/wswyl/www-cli-dev/issues"
   },
-  "gitHead": "5ed9c3c82b89056e4eeff822d0a270edc56e1576"
+  "gitHead": "2183e58a53163c3ae161a65e12cb239b8736a561"
 }
