@@ -11,8 +11,7 @@
   },
   "directories": {
     "lib": "lib",
-    "test": "__tests__",
-    "@www-cli-dev/utils": "^1.0.0"
+    "test": "__tests__"
   },
   "files": [
     "lib"
@@ -25,7 +24,7 @@
     "test": "node ./__tests__/core.test.js"
   },
   "dependencies": {
-    "@www-cli-dev/utils": "^1.0.4"
+    "@www-cli-dev/utils": "file:../utils"
   },
   "bugs": {
     "url": "https://github.com/wswyl/www-cli-dev/issues"

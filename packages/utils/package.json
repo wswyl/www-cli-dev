@@ -23,7 +23,7 @@
   "bugs": {
     "url": "https://github.com/wswyl/www-cli-dev/issues"
   },
-  "gitHead": "2183e58a53163c3ae161a65e12cb239b8736a561",
+  "gitHead": "f4960fbce3061eef0143f94425ccc6fe98db1c81",
   "publishConfig": {
     "access": "public"
   }
