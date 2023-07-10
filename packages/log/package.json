@@ -1,0 +1,29 @@
+{
+  "name": "@www-cli-dev/log",
+  "version": "1.0.4",
+  "description": "> TODO: description",
+  "author": "wangyulong <yulong.a.wang@accenture.com>",
+  "homepage": "https://github.com/wswyl/www-cli-dev#readme",
+  "license": "ISC",
+  "main": "lib/log.js",
+  "directories": {
+    "lib": "lib",
+    "test": "__tests__"
+  },
+  "files": [
+    "lib"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wswyl/www-cli-dev.git"
+  },
+  "scripts": {
+    "test": "node ./__tests__/@www-cli-dev/log.test.js"
+  },
+  "bugs": {
+    "url": "https://github.com/wswyl/www-cli-dev/issues"
+  }
+}
