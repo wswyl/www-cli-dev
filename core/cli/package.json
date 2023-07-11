@@ -24,7 +24,12 @@
     "test": "node ./__tests__/core.test.js"
   },
   "dependencies": {
-    "@www-cli-dev/utils": "file:../utils"
+    "@www-cli-dev/log": "file:../../utils/log",
+    "@www-cli-dev/utils": "file:../../utils/utils",
+    "colors": "^1.4.0",
+    "path-exists": "^5.0.0",
+    "semver": "^7.5.4",
+    "user-home": "^3.0.0"
   },
   "bugs": {
     "url": "https://github.com/wswyl/www-cli-dev/issues"
