@@ -26,7 +26,10 @@
   "dependencies": {
     "@www-cli-dev/log": "file:../../utils/log",
     "@www-cli-dev/utils": "file:../../utils/utils",
+    "@www-cli-dev/get-npm-info": "file:../../utils/get-npm-info",
     "colors": "^1.4.0",
+    "dotenv": "^16.3.1",
+    "minimist": "^1.2.8",
     "path-exists": "^5.0.0",
     "semver": "^7.5.4",
     "user-home": "^3.0.0"
