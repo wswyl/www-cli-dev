@@ -8,4 +8,5 @@
 #### minimist 检查参数  
 #### semver 版本号处理
 #### axios 请求  
-#### url-join 处理url
+#### url-join 处理url  
+#### commander 处理命令  
