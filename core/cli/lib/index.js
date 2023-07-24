@@ -10,7 +10,7 @@ const commander = require('commander')
 const pkg = require('../package.json');
 const log = require('@www-cli-dev/log');
 const init = require('@www-cli-dev/init');
-const { getNpmInfo } = require('@www-cli-dev/get-npm-info')
+const exec = require('@www-cli-dev/exec');
 
 const constant = require('./const');
 
@@ -20,16 +20,13 @@ const program = new commander.Command();
 
 async function core() {
     try {
-        checkPkgVersion();
-        checkNodeVersion();
-        checkRoot();
-        checkUserHome();
-        // checkInputArgs();
-        checkEnv();
-        await checkGlobalUpdate();
+        await prepare();
         registerCommand();
     } catch (e) {
         log.error(e.message)
+        if(process.env.LOG_LEVEL === 'verbose'){
+            console.log(e)
+        }
     }
 }
 
@@ -38,12 +35,13 @@ function registerCommand() {
         .name(Object.keys(pkg.name)[0])
         .usage('<command> [options]')
         .version(pkg.version)
-        .option('-d, --debug', '是否开启调试模式', false);
+        .option('-d, --debug', '是否开启调试模式', false)
+        .option('-tp, --targetPath <targetPath>', '是否指定本地调试文件路径', '')
     
     program
         .command('init [projectName]')
         .option('-f, --force', '是否强制初始化项目')
-        .action(init)
+        .action(exec)
 
     // 开启debug模式
     program.on('option:debug', function() {
@@ -53,6 +51,11 @@ function registerCommand() {
             process.env.LOG_LEVEL = 'info';
         }
         log.level = process.env.LOG_LEVEL;
+    })
+ 
+     // 指定targetPath
+     program.on('option:targetPath', function() {
+        process.env.CLI_TARGET_PATH = program._optionValues.targetPath
     })
 
     // 对未知命令进行监听
@@ -72,6 +75,15 @@ function registerCommand() {
     }
 }
 
+async function prepare() {
+    checkPkgVersion();
+    checkNodeVersion();
+    checkRoot();
+    checkUserHome();
+    checkEnv();
+    await checkGlobalUpdate();
+}
+
 function checkEnv() {
     // const dotenv = require('dotenv');
     // const dotenvpath = path.resolve(userHome, '.env');
@@ -82,9 +94,7 @@ function checkEnv() {
     //     });
     // }
     creatDefaultConfig()
-    log.verbose('环境变量' , process.env.CLI_HOME_PATH);
 }
-
 
 async function checkGlobalUpdate() {
     const currentVersion = pkg.version;
@@ -108,21 +118,6 @@ function creatDefaultConfig() {
         cliConfig['cliHome'] = path.join(userHome, constant.DEFAULT_CLI_HOME);
     }
     process.env.CLI_HOME_PATH = cliConfig.cliHome;
-}
-
-function checkInputArgs() {
-    const minimist = require('minimist');
-    args = minimist(process.argv.slice(2));
-    checkArgs()
-}
-
-function checkArgs() {
-    if(args.debug){
-        process.env.LOG_LEVEL = 'verbose'
-    } else {
-        process.env.LOG_LEVEL = 'info'
-    }
-    log.level = process.env.LOG_LEVEL
 }
 
 function checkUserHome() {

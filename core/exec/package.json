@@ -1,0 +1,33 @@
+{
+  "name": "@www-cli-dev/exec",
+  "version": "1.0.0",
+  "description": "www-cli-dev execute package",
+  "author": "wangyulong <yulong.a.wang@accenture.com>",
+  "homepage": "https://github.com/wswyl/www-cli-dev#readme",
+  "license": "ISC",
+  "main": "lib/index.js",
+  "directories": {
+    "lib": "lib",
+    "test": "__tests__"
+  },
+  "files": [
+    "lib"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wswyl/www-cli-dev.git"
+  },
+  "scripts": {
+    "test": "node ./__tests__/@www-cli-dev/exec.test.js"
+  },
+  "bugs": {
+    "url": "https://github.com/wswyl/www-cli-dev/issues"
+  },
+  "dependencies": {
+    "@www-cli-dev/log": "file:../../utils/log",
+    "@www-cli-dev/package": "file:../../modules/package"
+  }
+}

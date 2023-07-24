@@ -1,5 +1,5 @@
 const LOWEST_NODE_VERSION = '12.0.0';
-const DEFAULT_CLI_HOME = '.www-cli'
+const DEFAULT_CLI_HOME = '.www-cli-test'
 
 module.exports = {
     LOWEST_NODE_VERSION,

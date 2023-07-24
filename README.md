@@ -10,3 +10,10 @@
 #### axios 请求  
 #### url-join 处理url  
 #### commander 处理命令  
+#### pkg-dir 目录查询处理  
+#### npminstall 安装依赖
+#### fs-extra 创建本地缓存目录
+
+## 变量
+#### CLI_TARGET_PATH 本地代码入口文件
+#### CLI_HOME_PATH 缓存路径
